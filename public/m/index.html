@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--1.添加移动端的视口  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这是我的花淘</title>
+    <!-- 2.引入移动端的站点图标，但是rel要修改 -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 3.引入mui的css文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 4.引入字体图标的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 5.引入自己写的主页的less文件 注意rel="stylesheet/less"-->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <!-- 6.引入less.js编译器文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <h4>乐淘云购</h4>
+        <a href="#" class="fa fa-search" aria-hidden="true"></a>
+    </header>
+    <!-- 轮播图区域 -->
+    <section id="slide">
+            <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner1.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner2.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner3.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner4.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner5.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner6.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner7.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner8.jpg" /></a></div>
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner8.jpg" /></a></div>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+    </section>
+    <!-- 导航区域 -->
+    <nav id="nav"></nav>
+    <!-- 广告区域 -->
+    <section id="banner"></section>
+    <!-- 品牌专区 -->
+    <section id="brand"></section>
+    <!-- 运动专区 -->
+    <section id="sport"></section>
+    <!-- 女孩专区 -->
+    <section id="girl"></section>
+    <!-- 男孩专区 -->
+    <section id="boy"></section>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <!-- 7.引入mui的js文件  提供一些JS特性、轮播图滑动之类的-->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 8.引入获取元素要使用zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 9.引入模板引擎的js文件 渲染页面 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <!-- 19 引入自己写的主页的js文件  调用框架 发送请求之类代码-->
+    <script src="./js/index.js"></script>
+</body>
+</html>
