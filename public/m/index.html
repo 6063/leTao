@@ -23,48 +23,430 @@
         <h4>乐淘云购</h4>
         <a href="#" class="fa fa-search" aria-hidden="true"></a>
     </header>
-    <!-- 轮播图区域 -->
-    <section id="slide">
-            <div class="mui-slider">
-                <div class="mui-slider-group mui-slider-loop">
-                    <!--支持循环，需要重复图片节点-->
-                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner1.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner2.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner3.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner4.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner5.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner6.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner7.png" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="./images/banner8.jpg" /></a></div>
-                    <!--支持循环，需要重复图片节点-->
-                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner8.jpg" /></a></div>
-                </div>
-                <div class="mui-slider-indicator">
-                        <div class="mui-indicator mui-active"></div>
-                        <div class="mui-indicator"></div>
-                        <div class="mui-indicator"></div>
-                        <div class="mui-indicator"></div>
-                        <div class="mui-indicator"></div>
-                        <div class="mui-indicator"></div>
-                        <div class="mui-indicator"></div>
-                        <div class="mui-indicator"></div>
+    <!-- 区域滚动效果，这个是垂直方向上的区域滚动 -->
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <main id="main">
+                <!-- 轮播图区域 -->
+                <section id="slide">
+                        <div class="mui-slider">
+                            <div class="mui-slider-group mui-slider-loop">
+                                <!--支持循环，需要重复图片节点-->
+                                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner8.jpg" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner1.jpg" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner2.png" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner3.jpg" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner4.jpg" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner5.jpg" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner6.jpg" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner7.jpg" /></a></div>
+                                <div class="mui-slider-item"><a href="#"><img src="./images/banner8.jpg" /></a></div>
+                                <!--支持循环，需要重复图片节点-->
+                                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.jpg" /></a></div>
+                            </div>
+                            <div class="mui-slider-indicator">
+                                    <div class="mui-indicator mui-active"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                </div>
+                        </div>
+                        
+                </section>
+                <!-- 导航区域 使用栅格布局-->
+                <nav id="nav">
+                    <div class="mui-content">
+                        <div class="mui-row">                
+                            <div class="mui-col-xs-4"><a href="#"><img src="./images/nav1.png" alt=""></a></div>
+                            <div class="mui-col-xs-4"><a href="#"><img src="./images/nav2.png" alt=""></a></div>
+                            <div class="mui-col-xs-4"><a href="#"><img src="./images/nav3.png" alt=""></a></div>
+                            <div class="mui-col-xs-4"><a href="#"><img src="./images/nav4.png" alt=""></a></div>
+                            <div class="mui-col-xs-4"><a href="#"><img src="./images/nav5.png" alt=""></a></div>
+                            <div class="mui-col-xs-4"><a href="#"><img src="./images/nav6.png" alt=""></a></div>
+                        </div>
                     </div>
-            </div>
+                </nav>
+                <!-- 广告区域 -->
+                <section id="banner">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-8">
+                            <div class="mui-row">
+                                <div class="mui-col-xs-6"> <a href="#"><img src="./images/active1.png" alt=""></a></div>
+                                <div class="mui-col-xs-6"> <a href="#"><img src="./images/active2.png" alt=""></a></div>
+                                <div class="mui-col-xs-6"> <a href="#"><img src="./images/active4.png" alt=""></a></div>
+                                <div class="mui-col-xs-6"> <a href="#"><img src="./images/active5.png" alt=""></a></div>
+                            </div>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#" ><img src="./images/active3.png" alt=""></a>
+                        </div>
+                    </div>
+                </section> 
+                <!-- 品牌专区 -->
+                <section id="brand">
+                    <div class="title">
+                        <a href="#"><img src="./images/title0.png" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <div class="mui-row">
+                          
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand1.png" alt=""></a></div>
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand2.png" alt=""></a></div>
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand3.png" alt=""></a></div>
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand4.png" alt=""></a></div>
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand5.png" alt=""></a></div>
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand6.png" alt=""></a></div>
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand7.png" alt=""></a></div>
+                            <div class="mui-col-xs-3"><a href="#"><img src="./images/brand8.png" alt=""></a></div>  
+                        </div>
+                    </div>    
+                </section>
+                <!-- 运动专区 -->
+                <section id="sport">
+                    <div class="title">
+                        <a href="#"><img src="./images/title1.png" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <div class="mui-row">                           
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand1.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand2.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand3.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand4.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand5.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand6.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand7.png" alt="">
+                                    <p class="product-name">hellohellohel</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/brand8.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 女孩专区 -->
+                <section id="girl">
+                    <div class="title">
+                        <a href="#"><img src="./images/title2.jpg" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <div class="mui-row">
+                           
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play1.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play2.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play3.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play4.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play5.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play6.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play7.png" alt="">
+                                    <p class="product-name">hellohellohel</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-6">
+                                <a href="#" class="product">
+                                    <img class="product-img" src="./images/play8.png" alt="">
+                                    <p class="product-name">hellohello</p>
+                                    <div class="product-price">
+                                        <span class="new-price">￥888</span>
+                                        <del class="old-price">￥666</del>
+        
+                                    </div>
+                                    <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 男孩专区 -->
+                <section id="boy">
+                    <div class="title">
+                        <a href="#"><img src="./images/title3.jpg" alt=""></a>
+                    </div>
+                    <div class="content">
+                            <div class="mui-row">
+                               
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower1.png" alt="">
+                                        <p class="product-name">hellohello</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower2.png" alt="">
+                                        <p class="product-name">hellohello</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
             
-    </section>
-    <!-- 导航区域 -->
-    <nav id="nav"></nav>
-    <!-- 广告区域 -->
-    <section id="banner"></section>
-    <!-- 品牌专区 -->
-    <section id="brand"></section>
-    <!-- 运动专区 -->
-    <section id="sport"></section>
-    <!-- 女孩专区 -->
-    <section id="girl"></section>
-    <!-- 男孩专区 -->
-    <section id="boy"></section>
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower3.png" alt="">
+                                        <p class="product-name">hellohello</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
+            
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower4.png" alt="">
+                                        <p class="product-name">hellohello</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
+            
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower5.png" alt="">
+                                        <p class="product-name">hellohello</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
+            
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower6.png" alt="">
+                                        <p class="product-name">hellohello</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower7.png" alt="">
+                                        <p class="product-name">hellohellohel</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="#" class="product">
+                                        <img class="product-img" src="./images/flower8.png" alt="">
+                                        <p class="product-name">hellohello</p>
+                                        <div class="product-price">
+                                            <span class="new-price">￥888</span>
+                                            <del class="old-price">￥666</del>
+            
+                                        </div>
+                                        <button type="button" class="product-buy mui-btn mui-btn-primary mui-btn-outlined">抢购</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+        
+            </main>
+        </div>
+    </div>
+
+
+
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="fa fa-home active">
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="fa fa-bars">
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="cart.html" class="fa fa-shopping-cart">
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html" class="fa fa-user">
+                    <span>会员中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -78,7 +460,7 @@
 
 
 
-
+        
 
     <!-- 7.引入mui的js文件  提供一些JS特性、轮播图滑动之类的-->
     <script src="./lib/mui/js/mui.min.js"></script>

@@ -1,0 +1,123 @@
+/* 主题色 变量*/
+
+@mainColor: #006699;
+
+/* 页面的公共样式 CSS重置 */
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	/* 去除图片底部3px间距 */
+	vertical-align: middle;
+}
+body{
+	background-color: #fff;
+	/* padding-top: 45px; */
+	/* padding-bottom: 45px; */
+}
+
+/* 1. 头部区域公共样式 */
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 45px;
+    background-color: @mainColor;
+    >h4 {
+        color: #fff;
+        line-height: 45px;
+        text-align: center;
+        margin: 0;
+        font-weight: normal;
+    }
+    .fa-arrow-left{
+    	position: absolute;
+    	left: 15px;
+    	top: 15px;
+    	color:#fff;
+    }    
+    .fa-search {
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    /* 搜索表单 */
+    .search-form{
+    	 /* 给搜索表单添加一个左右内间距  内容变小 input宽度就会小 */
+    	 padding: 5px 45px;
+			>input{
+				background-color: #fff;
+				margin-bottom: 0;
+				/* 默认就让输入框文字居左 */
+				text-align:left;
+				font-size: 14px;
+			}
+    }
+}
+
+/* 3. 中间主体部分 */
+#main{
+	/* 加了margin main容器的高度和区域滚动的子容器的高度不一致
+	同时加margin会造成margin塌陷  父容器也会随着子容器的margin下来 */
+	/* margin-top:45px;
+	margin-bottom:45px;	 */
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+
+
+/* 9. 底部区域样式 */
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    /* 固定定位是没有默认100%宽度 */
+    width: 100%;
+    height: 45px;
+    background-color: @mainColor;
+    a {
+        color: #fff;
+        font-size: 14px;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        >span {
+            display: block;
+            margin-top: 2px;
+        }
+        &.active {
+            color: orange;
+        }
+    }
+}
+
+
+/* 3. 商品的公共样式 */
+
+.product {
+    display: block;
+    box-shadow: 0px 0px 5px #666;
+    text-align: center;
+    padding-bottom: 10px;
+    .product-img {
+        width: 100%;
+    }
+    .product-name {}
+    .product-price {
+        font-size: 12px;
+        .new-price {
+            color: #f00;
+        }
+        .old-price {
+            color: #888;
+        }
+    }
+    .product-buy {}
+}
