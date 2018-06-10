@@ -1,0 +1,40 @@
+/* 引入公共样式文件 */
+@import 'common.less';
+
+
+html,body{
+	height: 100%;
+}
+#main{
+	height: 100%;
+}
+/* 一个相对定位并且没有padding的容器 */
+.container {
+    position: relative;
+    height: 100%;
+    /* 1. 商品列表的样式 */
+    .productlist {
+        .title {
+            background-color: #eee;
+            .mui-row {
+                >div {
+                    >a {
+                        color: #666;
+                        text-align: center;
+                        font-size: 12px;
+                        display: block;
+                        line-height: 30px;
+                        >span {}
+                    }
+                }
+            }
+        }
+        .content {
+            .mui-row {
+                >div {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

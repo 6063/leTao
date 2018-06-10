@@ -13,7 +13,7 @@
     <!-- 2. 引入字体图标的css文件 -->
     <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
     <!-- 3. 引入分类的less文件 注意rel="stylesheet/less" -->
-    <link rel="stylesheet/less" href="less/cate.less">
+    <link rel="stylesheet/less" href="less/cart.less">
     <!-- 4. 引入less.js编译器文件 -->
     <script src="lib/less/less.js"></script>
 </head>
@@ -22,32 +22,26 @@
     <!-- 外面的大容器通常使用id 提示选择器优先级 区分每一块功能 -->
     <!-- 1. 头部区域  -->
     <header id="header">
-        <a href="#" class="fa fa-arrow-left"></a>
-        <form action="#" class="search-form">
-            <!-- 输入法打字的时候右下角的文字会变成搜索  -->
-            <input type="search" placeholder="请输入要搜索的商品">
-        </form>
-        <a href="./search.html" class="fa fa-search" aria-hidden="true"></a>
+        <a href="#" class="goBefore fa fa-arrow-left"></a>
+        <h4>登录</h4>        
     </header>
+
     <main id="main">
-        <div class="category-left">
-            <ul>
-               
-            </ul>
-        </div>
-        <div class="category-right">
-        		<!-- 区域滚动的父容器 -->
-            <div class="mui-scroll-wrapper">
-            		<!-- 区域滚动的子容器 -->
-                <div class="mui-scroll">
-                    <!-- 真实的滚动的DOM内容 -->
-                    <div class="mui-row">
-                       
-                    </div>
-                </div>
+
+        <form class="mui-input-group formLogin">
+            <div class="mui-input-row">
+            <input type="text" class="mui-input-clear" placeholder="用户名/手机号">
             </div>
-        </div>
+            <div class="mui-input-row">
+                <input type="password" class="mui-input-password" placeholder="密码">
+            </div>
+            <div class="mui-button-row">
+                <a type="button" class="mui-btn mui-btn-primary btn-login" >登录</a>
+            </div>
+            <a href="./register.html" class="freeRegister mui-pull-right">免费注册</a>
+        </form>
     </main>
+  
     <!-- 9. 底部导航 -->
     <footer id="footer">
         <div class="mui-row">
@@ -57,12 +51,12 @@
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="category.html" class="fa fa-bars active">
+                <a href="category.html" class="fa fa-bars">
                     <span>分类</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="cart.html" class="fa fa-shopping-cart">
+                <a href="cart.html" class="fa fa-shopping-cart active">
                     <span>购物车</span>
                 </a>
             </div>
@@ -73,26 +67,7 @@
             </div>
         </div>
     </footer>
-    <!-- 1. 定义左侧分类的模板 起一个模板的id Tmp 设置type="text/html"-->
-    	<!-- {{each rows as value i}} each是循环 rows是循环的数组 as value 给循环遍历的每一项起别名 i循环的索引 -->
-    <script id="cateogoryLeftTmp" type="text/html">
-    		{{each rows as value i}}	    			
-	    	   <li class="{{i == 0 ? 'active' : ''}}">
-	    	   	  <!-- 渲染左侧分类的时候把id保存在左侧分类的a的自定义属性data-id上 -->
-	            <a href="#" data-id="{{value.id}}">{{value.categoryName}}</a>
-	         </li>		         		         
-         {{/each}}
-    </script>
-    <!-- 2. 定义右侧分类的模板  -->
-    <script id="categoryRightTmp" type="text/html">
-    	{{each rows as value i}}
-    		 <div class="mui-col-xs-4">
-            <a href="#">
-                <img src="{{value.brandLogo}}" alt="">
-            		<p>{{value.brandName}}</p>
-            </a>
-        </div>
-    	{{/each}}
+    
     </script>
     <!-- 5. 引入mui的js文件 -->
     <script src="lib/mui/js/mui.js"></script>
@@ -101,7 +76,9 @@
     <!-- 7. 引入模板引擎的js文件 -->
     <script src="lib/artTemplate/template.js"></script>
     <!-- 8. 引入分类的js文件 -->
-    <script src="js/category.js"></script>
+    <script src="js/search.js"></script>
+
+   
 </body>
 
 </html>

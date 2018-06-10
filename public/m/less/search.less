@@ -1,0 +1,42 @@
+/* 引入公共样式文件 */
+@import 'common.less';
+
+
+/* 2. 搜索历史的样式 */
+
+.search-history{
+	padding:0 10px;
+	.title{		
+		span{
+			font-size: 12px;
+		}
+		.btn-clear{
+			color:#666;
+			font-size: 12px;
+		}
+	}
+	.content{
+		padding-top: 10px;
+		>ul{
+			border:1px solid #ccc;
+			>li{
+				border-bottom: 1px solid #ccc;
+				position: relative;
+				&:last-child{
+					border-bottom: 0;
+				}
+				>a{
+					color:#666;
+					font-size: 12px;
+					line-height: 30px;
+					padding-left: 15px;
+				}
+				.btn-delete{
+					position: absolute;
+					right: 10px;
+					top: 10px;
+				}
+			}
+		}
+	}
+}

@@ -121,3 +121,32 @@ body{
     }
     .product-buy {}
 }
+
+
+
+/* 4. 搜索表单的样式 */
+
+.search-form{	
+	>form{
+		padding: 10px;
+		position: relative;
+		padding-right: 64px;
+		>.input-search{
+			height: 33px;
+			font-size: 12px;
+			border-color: @mainColor;
+			/* 把输入框右上角右下角圆角去掉 */
+			border-radius: 3px 0px 0px 3px;
+			margin-bottom: 0;
+		}
+		.btn-search{
+			position: absolute;
+			right:10px;
+			top: 10px;
+			background-color: @mainColor;
+			border-color: @mainColor;
+			/* 把按钮左上角左下角的圆角去掉 */
+			border-radius: 0px 3px 3px 0px;
+		}
+	}
+}

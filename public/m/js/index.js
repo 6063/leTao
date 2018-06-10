@@ -1,15 +1,15 @@
 $(function(){
-  var letao = new letao();
+  var letao = new Letao();
   letao.initSlide();
   letao.initMui();
 })
 
 
-var letao = function(){
+var Letao = function(){
 
 }
 
-letao.prototype = {
+Letao.prototype = {
   initSlide:function(){
     //获得slider插件对象
     var gallery = mui('.mui-slider');
