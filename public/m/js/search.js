@@ -21,6 +21,7 @@ Letao.prototype = {
 			// 2. 获取当前文本输入的内容
             var search = $('.input-search').val();
             if(!search.trim()){
+                alert("亲，输入内容还空着呢。");
                 return;
             }
             // console.log(search);            
@@ -28,7 +29,7 @@ Letao.prototype = {
 			var arr = window.localStorage.getItem('searchData');
 			console.log(arr);
 			// 判断当前arr是否有值
-			if(arr.length && JSON.parse(arr).length){
+			if(arr.length && JSON.parse(arr).length>0){
 				// 有值 就把值通过JSON.parse(arr)把JSON字符串转成数组
                 arr = JSON.parse(arr);
                 id = arr[arr.length-1].id+1;

@@ -1,0 +1,90 @@
+@import './common.less';
+html,body{
+    height: 100%;
+}
+
+#header{
+    .shouye{
+        position: absolute;
+        right:10px;
+        top:50%;
+        transform:translateY(-50%);
+        color:#fff;
+    }
+}
+
+
+#main{
+    height: 100%;
+    padding-top:45px;
+    .content{
+        position: relative;
+        height: 100%;
+    }
+    #product{
+		font-size: 14px;
+		>div{
+			padding: 10px 0;
+			border-bottom: 1px solid #ccc;
+		}
+		.product-name{
+
+			>span{
+				font-size: 18px;
+			}
+		}
+		.product-price{
+			.new-price{
+				color:red;
+				font-size: 20px;
+				font-weight: 600;
+			}
+			.old-price{
+				color:#ccc;
+			}
+		}
+		.product-size{
+			.btn-size{
+				display: inline-block;
+				padding: 5px;
+				border:1px solid #ccc;
+				margin-bottom: 10px;
+				&.active{
+					background-color: orange;
+				}
+			}
+		}
+		.product-num{
+
+		}
+	}
+}
+
+#footer{
+    background-color: #ccc;
+    .btn-cart{
+        position: absolute;
+        left:15px;
+        color:black;
+        font-size: 22px;       
+    }
+    .box{
+        width: 100%;
+        height: 100%;
+        padding-left:50px;
+        display:flex;
+        justify-content: space-around;
+        padding:5px 5px 5px 50px;
+        a{
+            width: 48%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .btn_addCart{
+             background-color: darkred;
+         }
+        .btn-pay{
+             background-color: orange;
+         }
+    }
+}

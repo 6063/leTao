@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 2.引入移动端的站点图标，但是rel要修改 -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 3.引入mui的css文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 4.引入字体图标的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 5.引入自己写的主页的less文件 注意rel="stylesheet/less"-->
+    <link rel="stylesheet/less" href="./less/detail.less">
+    <!-- 6.引入less.js编译器文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <h4>商品详情</h4>
+        <a href="./search.html" class="fa fa-arrow-left"></a>
+        <a href="./index.html" class="shouye fa fa-home"></a>
+    </header>
+    <main id="main">
+
+        <div class="content">
+            <!-- 区域滚动部分 -->
+             <!-- 区域滚动的父容器 -->
+            <div class="mui-scroll-wrapper">
+                <!-- 区域滚动的子容器 -->
+                <div class="mui-scroll">
+                  <!-- 真实要显示的DOM内容 -->
+                    <!-- 1.滚动的轮播图 -->
+
+                    <section id="slide">
+                            <div class="mui-slider">
+                                <div class="mui-slider-group mui-slider-loop">
+                                    <!--支持循环，需要重复第一张和最后一张图片节点-->
+                                </div>
+                                <div class="mui-slider-indicator">                                      
+                                </div>
+                            </div>                            
+                    </section>
+
+                    <!-- 2.商品详情内容 -->
+                    <section id="product">
+                        <div class="product-name">
+                           名称：<span>李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</span>
+                        </div>
+                        <div class="product-price">
+                            价格： <span class="new-price">¥560.00</span> <del class="old-price">¥888.00</del>
+                        </div>
+                        <div class="product-size">
+                            尺码： <span class="btn-size active">35</span> 
+                        </div>
+                        <div class="product-num">
+                            数量：<span class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+                                  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                  <input class="mui-numbox-input" type="number" />
+                                  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                                </span>
+                                剩余：<span>20</span>件
+                        </div>
+                    </section> 
+    
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+    <footer id="footer"> 
+        <a href="cart.html" class="btn-cart fa fa-shopping-cart"></a>
+        <div class="box">
+            <a href="#" class="btn_addCart">加入购物车</a>
+            <a href="#" class="btn-pay">立即购买</a>
+        </div>            
+    </footer>
+
+    <!-- 1. 渲染商品的内容 定义一个商品的模板-->
+    <script id="productDetailTmp" type="text/html">
+        <div class="product-name">
+           名称：<span>{{proName}}</span>
+        </div>
+        <div class="product-price">
+            价格： <span class="new-price">¥{{price}}</span> <del class="old-price">¥{{oldPrice}}</del>
+        </div>
+        <div class="product-size">
+            尺码： 
+            {{each size as value i}} 
+                <span class="btn-size" data-size="{{value}}">{{value}}</span>
+            {{/each}}
+        </div>
+        <div class="product-num">
+            数量：<span class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{num}}'>
+                  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                  <input class="mui-numbox-input" type="number" value="0" />
+                  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                </span>
+                剩余：<span>{{num}}</span>件
+        </div>
+    </script>
+
+    <!-- 2. 轮播图的模板 -->
+    <script id="productSlideTmp" type="text/html">
+            <!-- 轮播图的图片容器 -->
+            <div class="mui-slider-group mui-slider-loop">
+                {{each pic as value i}}
+                    <!-- 判断如果i==0表示当前是第一张 第一张的前面放最后一张图  把最后一张图放到前面pic[pic.length-1]表示最后一张 -->
+                    {{if i == 0}}
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#"><img src="{{pic[pic.length-1].picAddr}}" /></a>
+                        </div>  
+                    {{/if}}
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="{{value.picAddr}}" /></a>
+                    </div>  
+                    <!-- 判断如果i==pic.lenght-1表示当前是最后一张 最后一张要在后面添加第一张 pic[0]表示第一张 -->
+                    {{if i == pic.length-1}}
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#"><img src="{{pic[0].picAddr}}" /></a>
+                        </div>  
+                    {{/if}}          
+                {{/each}}           
+            </div>
+            <!-- 轮播图小圆点容器 -->
+            <div class="mui-slider-indicator">
+                 {{each pic as value i}}
+                    <!-- mui-active当前正在显示的小圆点 -->
+                    <div class="mui-indicator {{i == 0 ? 'mui-active' : ''}}"></div>
+                 {{/each}}   
+            </div>
+    </script>
+    <!-- 7.引入mui的js文件  提供一些JS特性、轮播图滑动之类的-->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 8.引入获取元素要使用zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 9.引入模板引擎的js文件 渲染页面 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <!-- 19 引入自己写的主页的js文件  调用框架 发送请求之类代码-->
+    <script src="./js/detail.js"></script>
+</body>
+</html>
